@@ -1,0 +1,64 @@
+.view-container {
+    /* width: 1440px; */
+    /* position: relative; left: -50%; */
+    /* background-color: lightgray; */
+}
+
+.header {
+    height: 88px;
+    overflow: hidden;
+    padding: 20px 10px;
+    margin-left: 135px;
+    margin-right: 135px;
+    position: sticky;
+}
+
+.header-right {
+    float: right;
+    height: inherit;
+  }
+.icon {
+    height: 24px;
+}
+.nav .nav-item .nav-link  {
+      position: relative;
+      color:#737373;
+      font-size: 14px;
+  }
+
+.nav-li {
+    margin-right: 48px;
+    color: white;
+    font-size: 16px;
+}
+
+a:hover {
+    color: #9933ff !important;
+}
+.navigation {
+    height: 46px;
+    background-color:#9933ff;
+    padding: 12px 135px;    
+}
+
+.path {
+    position: absolute;
+    left: 135px;
+    top: 154px;
+    right: 135px;
+    padding-bottom: 10px;
+}
+
+.promo {
+    position: absolute;
+    margin-left: 135px;
+    margin-right: 135px;
+    top: 216px;
+
+}
+
+
+.item {
+    height: 222px;
+    width: 222px;
+}
