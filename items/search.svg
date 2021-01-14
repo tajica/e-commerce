@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="ic_search" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:#5c6673;fill-rule:evenodd}
+        </style>
+    </defs>
+    <path id="Rectangle_1389" fill="none" d="M0 0H24V24H0z"/>
+    <g id="search" transform="translate(3 3)">
+        <path id="Path_2211" d="M10.5 10.5a1.183 1.183 0 0 1 1.674 0l4.556 4.556a1.184 1.184 0 1 1-1.673 1.674L10.5 12.17a1.183 1.183 0 0 1 0-1.674z" class="cls-2" transform="translate(1.861 1.861)"/>
+        <path id="Path_2212" d="M7.692 14.2a6.508 6.508 0 1 0-6.509-6.508A6.508 6.508 0 0 0 7.692 14.2zm7.692-6.508A7.692 7.692 0 1 1 7.692 0a7.692 7.692 0 0 1 7.692 7.692z" class="cls-2"/>
+    </g>
+</svg>
