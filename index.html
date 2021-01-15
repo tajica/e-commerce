@@ -9,7 +9,7 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
    </head>
    <body>
-      <div class="view-container" >
+     <!-- <div class="page-container "> -->
          <div class="header">
             <a href="https://taucommerce.com/"> <img style="height: 48px; width: 48px;" src="items/logo.svg"> </a>
             <div class="header-right">
@@ -21,13 +21,13 @@
                      <a href="#" class="nav-link"> Prijavi se</a>
                   </li>
                   <li class="nav-item">
-                     <a href="#" class="nav-link"> <img class="icon" src="items/search.svg"></a>
+                     <button href="#" class="btn-link"> <img class="icon" src="items/search.svg"></button>
                   </li>
                   <li class="nav-item">
-                     <a href="#" class="nav-link"> <img class="icon" src="items/fav.svg"></a>
+                     <button href="#" class="btn-link"> <img class="icon" src="items/fav.svg"></button>
                   </li>
                   <li class="nav-item">
-                     <a href="#" class="nav-link"><img class="icon" src="items/shop.svg"></a>
+                     <button href="#" class="btn-link"><img class="icon" src="items/shop.svg"></button>
                   </li>
                </ul>
             </div>
@@ -36,31 +36,51 @@
             <ul class="nav"  id="navigation">           
             </ul>
          </div>
-         <div class="path">
-            neki tekst 
-          </div>
+         <div class="path breadcrumb">
+           
+               <ol class="breadcrumb">
+                 <li class="breadcrumb-item"><a href="#">Pocetna</a></li>
+                 <li class="breadcrumb-item"><a href="#">Parfemi</a></li>
+                 <li class="breadcrumb-item"><a href="#">Parfemski setovi</a></li>
+                 <li class="breadcrumb-item active" >Ženski parfemski setovi</li>
+               </ol>
+           
+         </div>
+      <div class="view-container" >
+         <div class="promo">
+            <div class="promo-txt"> 
+            <h1>Ženski parfemski setovi</h1>
+            Pregledaj novu kolekciju ženskih parfemskih setova. <br>
+            Svetski poznati brendovi, samo kod nas.</div>
+         </div>
+         <table>
+            <tr >
+               <td style="text-align: left;" >
+                  Prikazano 1 - 18 od 140 proizvoda
+               </td>
+               <td style="text-align: right;" >
+                <button> sortiraj </button>
+               </td>
+            </tr>
+            <tr style="vertical-align: top;">
+               <td style=" width: calc(25%-30px); padding: 10px;">
+                  <div class="filter-item">       
+                  </div>
+                  
+               </td>
+               <td style=" width: calc(75%-30px)">
+                  <div class="items-grid" id="items-grid">
 
-          <div class="promo">
-           <img style="max-width: calc(100vw - 270px);  height: auto;" src="items/promo.svg"/>
-          </div>
-
-      <!-- trash -->
-      <div >
-        <div class="item active">
-           <img
-              src="items/item1.svg"              
-              />
-        </div>
-        <div class="item">
-           <img
-              src="items/item2.svg"
-              alt="Chicago"
-              />
-        </div>
-     </div>
-     <!-- end trash -->
+                  </div>
+               </td>
+            </tr>
+         </table>
       </div>
+      <footer class="footer">
+            
+      </footer>
 
    </body>
    <script src="main.js"></script>
 </html>
+
