@@ -8,79 +8,128 @@
       <link rel="stylesheet" href="css/style.css" />
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
    </head>
-   <body>
-     <!-- <div class="page-container "> -->
-         <div class="header">
-            <a href="https://taucommerce.com/"> <img style="height: 48px; width: 48px;" src="items/logo.svg"> </a>
-            <div class="header-right">
-               <ul class="nav">
-                  <li class="nav-item">
-                     <a href="#" class="nav-link" style=" border-right: 1px solid;">Registruj se</a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#" class="nav-link"> Prijavi se</a>
-                  </li>
-                  <li class="nav-item">
-                     <button href="#" class="btn-link"> <img class="icon" src="items/search.svg"></button>
-                  </li>
-                  <li class="nav-item">
-                     <button href="#" class="btn-link"> <img class="icon" src="items/fav.svg"></button>
-                  </li>
-                  <li class="nav-item">
-                     <button href="#" class="btn-link"><img class="icon" src="items/shop.svg"></button>
-                  </li>
-               </ul>
-            </div>
-         </div>
-         <div class="navigation">
-            <ul class="nav"  id="navigation">           
-            </ul>
-         </div>
-         <div class="path breadcrumb">
-           
-               <ol class="breadcrumb">
-                 <li class="breadcrumb-item"><a href="#">Pocetna</a></li>
-                 <li class="breadcrumb-item"><a href="#">Parfemi</a></li>
-                 <li class="breadcrumb-item"><a href="#">Parfemski setovi</a></li>
-                 <li class="breadcrumb-item active" >Ženski parfemski setovi</li>
-               </ol>
-           
-         </div>
-      <div class="view-container" >
-         <div class="promo">
-            <div class="promo-txt"> 
+   <body onload="onInit()"></body>
+   <!-- <div class="page-container "> -->
+   <div class="header">
+      <a href="https://taucommerce.com/"> <img style="height: 48px; width: 48px;" src="items/logo.svg"> </a>
+      <div class="header-right">
+         <ul class="nav">
+            <li class="nav-item">
+               <a href="#" class="nav-link" style=" border-right: 1px solid;">Registruj se</a>
+            </li>
+            <li class="nav-item">
+               <a href="#" class="nav-link"> Prijavi se</a>
+            </li>
+            <li class="nav-item">
+               <button href="#" class="btn-link"> <img class="icon" src="items/search.svg"></button>
+            </li>
+            <li class="nav-item">
+               <button href="#" class="btn-link"> <img class="icon" src="items/fav.svg"></button>
+            </li>
+            <li class="nav-item">
+               <button href="#" class="btn-link"><img class="icon" src="items/shop.svg"></button>
+            </li>
+         </ul>
+      </div>
+   </div>
+   <div class="navigation">
+      <ul class="nav"  id="navigation">           
+      </ul>
+   </div>
+   <div class="path ">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a style="color: #26004d;" href="#">Pocetna</a></li>
+         <li class="breadcrumb-item"><a style="color: #26004d;"  href="#">Parfemi</a></li>
+         <li class="breadcrumb-item"><a  style="color: #26004d;" href="#">Parfemski setovi</a></li>
+         <li class="breadcrumb-item active" >Ženski parfemski setovi</li>
+      </ol>
+   </div>
+   <div class="view-container" >
+      <div class="promo">
+         <div class="promo-txt">
             <h1>Ženski parfemski setovi</h1>
             Pregledaj novu kolekciju ženskih parfemskih setova. <br>
-            Svetski poznati brendovi, samo kod nas.</div>
+            Svetski poznati brendovi, samo kod nas.
          </div>
-         <table>
-            <tr >
-               <td style="text-align: left;" >
-                  Prikazano 1 - 18 od 140 proizvoda
-               </td>
-               <td style="text-align: right;" >
-                <button> sortiraj </button>
-               </td>
-            </tr>
-            <tr style="vertical-align: top;">
-               <td style=" width: calc(25%-30px); padding: 10px;">
-                  <div class="filter-item">       
+      </div>
+      <table>
+         <tr >
+            <td style="text-align: left;" >
+               Prikazano 1 - 18 od 140 proizvoda
+            </td>
+            <td style="text-align: right;" >
+               <div class="dropdown" >
+                  Sortiraj po 
+                  <button class="dropbtn">Dropdown</button>
+                  <div class="dropdown-content" style="float:right;" >
+                     <button class="dropdown-item" type="button">Najnovije</button>
+                     <button class="dropdown-item" type="button">Cena rastuće</button>
+                     <button class="dropdown-item" type="button">Cena opadajuće</button>
+                     <button class="dropdown-item" type="button">Naziv proizvoda</button>
+                  </div>
+               </div>
+            </td>
+         </tr>
+         <tr style="vertical-align: top;">
+            <td style=" width: calc(25%-30px); padding: 10px;">
+               <!-- filter -->
+               <div class="filter-item">
+                  <div id="selected-filters"> 
+                     </div>
+                  <button class="filter-btn" onclick='removeFilters()'> Obriši sve filtere</button>
+                  <div class="wrap-collabsible"> 
+                     <input id="col-price" class="toggle" type="checkbox"> 
+                     <label for="col-price" class="lbl-toggle">Filtriraj po ceni</label>
+                     <div class="collapsible-content">
+                        <div class="content-inner">
+                             <div id="filter-price" class="slide-container"> <span id="slider"></span> </div>
+                        </div>
+                     </div>
                   </div>
                   
-               </td>
-               <td style=" width: calc(75%-30px)">
-                  <div class="items-grid" id="items-grid">
-
+                                   
+                  <div class="wrap-collabsible"> 
+                     <input id="col-brand" class="toggle" type="checkbox"> 
+                     <label for="col-brand" class="lbl-toggle">Filtriraj po brendu</label>
+                     <div class="collapsible-content">
+                        <div class="content-inner">
+                            <ul class="filter-ul" id="filter-brand">
+                                       </ul>
+                                    
+                        </div>
+                     </div>
                   </div>
-               </td>
-            </tr>
-         </table>
+                  
+                  <div class="wrap-collabsible"> 
+                     <input id="col-volume" class="toggle" type="checkbox"> 
+                     <label for="col-volume" class="lbl-toggle">Filtriraj po zapremini</label>
+                     <div class="collapsible-content">
+                        <div class="content-inner">
+                               <ul class="filter-ul" id="filter-volume"></ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </td>
+            <td style=" width: calc(75%-30px)">
+               <!-- items -->
+               <div class="items-grid" id="items-grid">
+               </div>
+            </td>
+         </tr>
+      </table>
+      <div class="pagination">
+         <button id="pagination-btn" onclick="pageChng(1)">
+            &lt;&lt;
+         </button>
+         <div id="pagination"></div>
+         <button id="pagination-btn" onclick="pageChng(1)">
+            &gt;&gt;
+         </button>
       </div>
-      <footer class="footer">
-            
-      </footer>
-
+   </div>
+   <footer class="footer">
+   </footer>
    </body>
    <script src="main.js"></script>
 </html>
-
