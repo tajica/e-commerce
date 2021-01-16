@@ -1,3 +1,4 @@
+
 .view-container {
   margin-left: 115px;
   margin-right: 115px;
@@ -25,7 +26,7 @@
   max-width: calc(75vw-260px);
 }
 .grid-item {
-    box-shadow: 5px 5px 5px 5px#e6ccff;
+  box-shadow: 5px 5px 5px 5px#e6ccff;
   border: 1px solid white;
   font-size: 30px;
   text-align: center;
@@ -33,18 +34,16 @@
   border-radius: 20px;
   /* width: 30%; */
   max-width: 260px;
-  
 }
 
 .grid-item:hover {
-    box-shadow:  5px 5px 5px 5px #dab3ff;
+  box-shadow: 5px 5px 5px 5px #dab3ff;
 }
 
 .filter-item {
   border: 1px solid #e6ccff;
   padding: 0 20px;
-  font-size: 14px;
-  text-align: center;
+
   max-height: 1100px;
   border-radius: 20px;
   top: 0;
@@ -87,20 +86,18 @@ a:hover {
   margin-right: 115px;
   padding: 10px 0;
   height: 82px;
-  background-color: white;
+  /* background-color: white; */
 }
 
-
 .breadcrumb {
-    background-color: white !important;
-    color: #26004d !important;
+  background-color: white !important;
+  color: #26004d !important;
 }
 .promo {
   position: relative;
   /* margin-left: 115px; */
   /* margin-right: 115px; */
-  /* background-image: url("../items/promo.svg"); sporo se ucitava sa slikom, otkomentarisi */
-  background-color: lavender;
+  background-image: url("../items/promo.svg"); 
   height: 348px;
   width: calc(100vw - 260px);
   background-size: contain;
@@ -116,51 +113,47 @@ a:hover {
 }
 
 .item-image {
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    top: 0;
-    left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .item-body {
-    height: 190px;
-    border-top: 1px solid #aac2e1  ;
-    padding: 20px;
-    color: #26004d;
-    text-align: left;
+  height: 190px;
+  border-top: 1px solid #aac2e1;
+  padding: 20px;
+  color: #26004d;
+  text-align: left;
 }
 
 .item-brand {
-    
-    font-size: 14px;
-    color: #aac2e1;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-      
+  font-size: 14px;
+  color: #aac2e1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .item-name {
-    text-align: left;
-    font-size: 16px;
-    color: #26004d;
-    float: left;
-    height: 70px;
-    width: 220px;
-    overflow-wrap: break-word;
-    text-overflow: ellipsis;
-    
+  text-align: left;
+  font-size: 16px;
+  color: #26004d;
+  float: left;
+  height: 70px;
+  width: 220px;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
 }
 
 .item-price {
-    text-align: left;
-    font-size: 24px;
-    color: #260047;
-    float: left;
-    bottom: 0;
-    margin-top: 20px;
-
+  text-align: left;
+  font-size: 24px;
+  color: #260047;
+  float: left;
+  bottom: 0;
+  margin-top: 20px;
 }
 
 .footer {
@@ -179,205 +172,318 @@ a:hover {
 }
 
 table {
-    width: 100%;
+  width: 100%;
 }
 
 .dropbtn {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #9933ff;
-    color: #9933ff;
-    /* padding: 16px; */
-    font-size: 16px;
-    border: none;
-    width: 170px;
-    height: 40px;
-    text-align: center;
-    display: inline-block;
-  
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 50px;
-    background-color: white;
-    border-radius: 5px;
-    border: 2px solid #9933ff;
-    color: #9933ff;
-    text-align: left;
-    width: 170px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-    
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: inline-block;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {   
-    display: inline-block;
-    border: 2px solid #9934f4;
-    color: #9934f4;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #9933ff;
+  color: #9933ff;
+  /* padding: 16px; */
+  font-size: 16px;
+  border: none;
+  width: 170px;
+  height: 40px;
+  text-align: center;
+  display: inline-block;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-/* #filter-price #filter-volume #filter-price{
-    
-} */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #9933ff;
+  color: #9933ff;
+  text-align: left;
+  width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  display: inline-block;
+  border: 2px solid #9934f4;
+  color: #9934f4;
+}
 
 .filter-btn {
-    background-color: white;
-    font-size: 14px;
-    text-decoration: underline;
-    float: left;
-    border: none;
-    color:  #260047;
-
+  background-color: white;
+  font-size: 14px;
+  text-decoration: underline;
+  float: left;
+  border: none;
+  color: #260047;
 }
 .filter-ul {
-    font-size: 14px;
-    list-style: none;
-    text-align: left;
-    padding: 5px;
-    max-height: 380px;
-    overflow-y: auto;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    margin: 40px 10px;
+  font-size: 14px;
+  list-style: none;
+  text-align: left;
+  padding: 5px;
+  max-height: 380px;
+  overflow-y: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0 10px;
 }
 
-.selected-filters {
-    max-height: 140px;
-    overflow-y: auto;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding: 10px;
+#selected-filters {
+  max-height: 160px;
+  overflow-y: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 10px;
+  scrollbar-width: thin;       
+  scrollbar-color: lightgray lightslategray;  
+
 }
 
 .checkbox-inline {
-    display: block;
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 12px;
-    cursor: pointer;
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-inline input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  /* background-color: white; */
+  border: 1px solid #9934f4;
+  border-radius: 2px;
+}
+
+/* On mouse-over, add a background color */
+.checkbox-inline :hover input ~ .checkmark {
+  background-color: #9934f4;
+}
+
+/* When the checkbox is checked, add a background */
+.checkbox-inline input:checked ~ .checkmark {
+  background-color: #9934f4;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-inline input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-inline .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.slidecontainer {
+  width: 220px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #e6ccff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #9934f4;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #9934f4;
+  cursor: pointer;
+}
+
+/*colapsable filter div */
+
+input[type="checkbox"] {
+  display: none;
+}
+.wrap-collabsible {
+  margin: 10px 0;
+}
+.lbl-toggle {
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+  padding: 1rem;
+  color: #260047;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+.lbl-toggle:hover {
+  color: #9934f4;
+}
+.lbl-toggle::after {
+  content: " ";
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  
+  margin-left: 0.8rem;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-out;
+}
+.toggle:checked + .lbl-toggle::after {
+  transform: rotate(90deg) translateX(-3px);
+}
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 350px;
+}
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.collapsible-content .content-inner {
+  /* background: rgba(0, 105, 255, 0.2); */
+  border-bottom: 1px solid lightblue; margin:10px;
+}
+.collapsible-content p {
+  margin-bottom: 0;
+}
+
+.chip {
+    display: inline-block;
+    padding: 0 5px;
+    height: 24px;
     font-size: 14px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    line-height: 24px;
+    border-radius: 3px;
+    border: 1px solid #f1f1f1;
+    position: relative;
+    max-width: 180px;
     overflow: hidden;
+    
     white-space: nowrap;
     text-overflow: ellipsis;
-    text-align: left;
-  
   }
   
-  /* Hide the browser's default checkbox */
-  .checkbox-inline input {
-    position: absolute;
-    opacity: 0;
+  .closebtn {
+    padding-left: 10px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
     cursor: pointer;
-    height: 0;
-    width: 0;
+    min-width: 20px;
+    
   }
   
-  /* Create a custom checkbox */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: white;
-    border: 1px solid #9934f4;
-    border-radius: 2px;
-  }
-  
-  /* On mouse-over, add a background color */
-  .checkbox-inline :hover input ~ .checkmark {
-    background-color: #9934f4;
-  }
-  
-  /* When the checkbox is checked, add a background */
-  .checkbox-inline input:checked ~ .checkmark {
-    background-color: #9934f4;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .checkbox-inline input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .checkbox-inline .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  .closebtn:hover {
+    color: #111;
   }
 
-  .slidecontainer {
-    width: 220px;
-  }
-  
-  .slider {
-    -webkit-appearance: none;
+  .pagination {
+    height: 80px;
     width: 100%;
-    height: 8px;
-    border-radius: 5px;
-   background: #e6ccff;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    position: relative;
+    padding: 10px;
+    margin-left: 48%;
+  }
+
+  .pagination a {
+    color: #260047;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    
   }
   
-  .slider:hover {
-    opacity: 1;
+  .pagination a.active {
+    text-decoration: underline;
+
   }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #9934f4;
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #9934f4;
-    cursor: pointer;
+
+  #pagination-btn {
+      background-color: #9934f4;
+      color: white;
+      border-radius: 25px;
+      width: 48px;
+      height: 48px;
   }

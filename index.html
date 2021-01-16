@@ -74,17 +74,40 @@
             <td style=" width: calc(25%-30px); padding: 10px;">
                <!-- filter -->
                <div class="filter-item">
-                  <div id="selected-filters"> chips</div>
-                  <button class="filter-btn" onclick="alert('ukloni filtere')"> Obriši sve filtere</button>
-                  <div id="filter-price" class="slide-container"> <span id="demo"></span> price slider </div>
-                  <div style="border: 1px solid lightblue; margin:10px"></div>
-                  <div >
-                     <ul class="filter-ul" id="filter-brand">
-                     </ul>
+                  <div id="selected-filters"> 
+                     </div>
+                  <button class="filter-btn" onclick='removeFilters()'> Obriši sve filtere</button>
+                  <div class="wrap-collabsible"> 
+                     <input id="col-price" class="toggle" type="checkbox"> 
+                     <label for="col-price" class="lbl-toggle">Filtriraj po ceni</label>
+                     <div class="collapsible-content">
+                        <div class="content-inner">
+                             <div id="filter-price" class="slide-container"> <span id="slider"></span> </div>
+                        </div>
+                     </div>
                   </div>
-                  <div style="border: 1px solid lightblue; margin:10px"></div>
-                  <div >
-                     <ul class="filter-ul" id="filter-volume"></ul>
+                  
+                                   
+                  <div class="wrap-collabsible"> 
+                     <input id="col-brand" class="toggle" type="checkbox"> 
+                     <label for="col-brand" class="lbl-toggle">Filtriraj po brendu</label>
+                     <div class="collapsible-content">
+                        <div class="content-inner">
+                            <ul class="filter-ul" id="filter-brand">
+                                       </ul>
+                                    
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="wrap-collabsible"> 
+                     <input id="col-volume" class="toggle" type="checkbox"> 
+                     <label for="col-volume" class="lbl-toggle">Filtriraj po zapremini</label>
+                     <div class="collapsible-content">
+                        <div class="content-inner">
+                               <ul class="filter-ul" id="filter-volume"></ul>
+                        </div>
+                     </div>
                   </div>
                </div>
             </td>
@@ -95,6 +118,15 @@
             </td>
          </tr>
       </table>
+      <div class="pagination">
+         <button id="pagination-btn" onclick="pageChng(1)">
+            &lt;&lt;
+         </button>
+         <div id="pagination"></div>
+         <button id="pagination-btn" onclick="pageChng(1)">
+            &gt;&gt;
+         </button>
+      </div>
    </div>
    <footer class="footer">
    </footer>

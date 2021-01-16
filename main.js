@@ -3,6 +3,7 @@ function onInit() {
     getFilterValues();
     createItems(itemList);
     createCategories();
+    pagination(page);
 }
 
 function createCategories() { 
@@ -308,22 +309,50 @@ var jsonItems = {
           "price":10371.36,
           "volume":10,
           "image":"items/item2.svg"
-       }
+        },
+        {
+            "id":36,
+            "brand":"Neko Bas Dugacko Ime Brenda ",
+            "name":"Gucci",
+            "price":13049.2,
+            "volume":60,
+            "image":"items/item3.svg"
+         }
     ]
  }
- var itemTxt = JSON.stringify(jsonItems.items)
+var itemTxt = JSON.stringify(jsonItems.items)
 var itemList = JSON.parse(itemTxt);
 
 var page = 1;
 var itmsPerPage = 18;
+var totalPages = 0;
 
-function pagination(way) { 
-    page += way;
+function pagination() { 
+    var pageNmr = '';
+    for (var i = 0; i < totalPages; i++){
+        pageNmr += '<a href="#">' + (i + 1) + '</a>';
+    }
+    document.getElementById("pagination").innerHTML = pageNmr;
+}
+
+function pageChng(val) { 
+    if (val == 1 && page != totalPages) {
+        page += val;
+        // dodaj disable na elemnt
+    } else if (val == - 1 && page != 1) { 
+        page -= val;
+    }
 }
 
 function createItems(newList) {
     var it = '';
+    if (newList.length > 0 && newList.length % itmsPerPage == 0) {
+        totalPages = newList.length / itmsPerPage;
+    } else if (newList.length > 0 && newList.length % itmsPerPage != 0) { 
+        totalPages = Math.floor(newList.length / itmsPerPage) + 1;
 
+    }
+                
     var itemCounter = (page - 1) * itmsPerPage;
     newList.forEach(item => {
        
@@ -347,13 +376,19 @@ function createItems(newList) {
        
         var brands = [];
         var volumes = [];
+        var maxVol = 0;
+       
         itemList.forEach(item => {
             brands.push(item.brand);
-            volumes.push(item.volume);
+            // volumes.push(item.volume);
             if (item.price > priceMax) {
                 priceMax = item.price
             } else if (item.price < priceMin) {
                 priceMin = item.price;
+            }
+
+            if (item.volume > maxVol) { 
+                maxVol = item.volume;
             }
         });
         var rangeValue = priceMax;
@@ -362,29 +397,75 @@ function createItems(newList) {
                 + priceMin + '" max=" ' + priceMax + '" value=" ' + rangeValue + '" class="slider" id="myRange">';
 
         brands = brands.filter((v, i, a) => a.indexOf(v) === i);
-        volumes = volumes.filter((v, i, a) => a.indexOf(v) === i);
-
 
    //proveri sto array.sort() ne radi??
         
         var brandsF = '';
 
         brands.forEach(brand => {
-            brandsF += ' <li><label class="checkbox-inline">'+ brand +'<input type="checkbox" > <span class="checkmark"></span></label></li>'
+            brandsF += ' <li><label class="checkbox-inline">' + brand + '<input type="checkbox" id="' + brand
+                + '" onclick="isChecked(this.id)"> <span class="checkmark"></span></label></li>'
             
         });
 
         document.getElementById("filter-brand").innerHTML = brandsF;
 
+        var volRange = [];
+        
+        for ( var r = 0, id =0;  r < maxVol + 50; r += 50, id++) { 
+            volRange.push({ id: id, minVolume: r, maxVolume: r+50})
+            }
+        
         var volumesF = '';
-        volumes.forEach(volume => {
-            volumesF += ' <li><label class="checkbox-inline"><input type="checkbox" >'+ volume +'ml <span class="checkmark"></span></label></li>'
+        volRange.forEach(volume => {
+            volumesF += ' <li><label class="checkbox-inline"><input  type="checkbox" id=" onclick="isChecked(this.id)"' 
+               + volRange.id + ' >' + volume.minVolume + ' - ' + volume.maxVolume
+                + 'ml <span class="checkmark"></span></label></li>'
             
         });
 
         document.getElementById("filter-volume").innerHTML = volumesF;
 
-    }
+}
+var chkList = [];
 
+function isChecked(id) {
+    var checkBox = document.getElementById(id);
+    var text = document.getElementById("text");
+    if (checkBox.checked == true){
+        chkList.push(id);
+        console.log(chkList);
+    } else {
+        var index = chkList.indexOf(id);
+            if (index !== -1) {
+            chkList.splice(index, 1);
+        }
+        console.log(chkList);
+    }
+    editChips();
+}
+
+function editChips() { 
+    var chipEl = '';
+    chkList.forEach(chip => {
+        chipEl += '<div class="chip"> ' + chip +
+            '<span class="closebtn" onclick="removeChip('+ chip +')">&times;</span></div>';
+        
+    });
+    document.getElementById("selected-filters").innerHTML = chipEl;
+
+}
+
+function removeChip(id) {
+    var index = chkList.indexOf(id);
+    if (index !== -1) {
+        chkList.splice(index, 1);
+    }
+}
     
-// }
+function removeFilters() { 
+    chkList = [];
+    editChips();
+
+}
+    
